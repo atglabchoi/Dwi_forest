@@ -1,0 +1,34 @@
+<!doctype html>
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="5">
+        <title>실시간 산불 위험도</title>
+        <H1>실시간 산불 위험도</H1>
+    </head>
+    <body>
+        <br>
+        <br>
+            <table class="table table-hover table-striped text-center" style=" width: 50%; border: 1px  solid #111114;">
+                <thead>
+                    <tr>
+                        <center>
+                            <th>위치</th>
+                            <th>시간</th>
+                            <th>위험도 수치</th>
+                            <th>위험등급</th>
+                        </center>
+                    </tr>
+                </thead>
+            <tbody>
+                {% for i in data_list %}
+                <tr>
+                    <td><center>{{ i[1] }}</center></td>
+                    <td><center>{{ i[2] }}</center></td>
+                    <td><center>{{ i[3] }}</center></td>
+                    <td><center>{{ i[4] }}</center></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+    </body>
+</html>
